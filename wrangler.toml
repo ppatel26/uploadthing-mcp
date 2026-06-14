@@ -1,0 +1,14 @@
+name = "uploadthing-mcp"
+main = "src/worker.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Secrets — set via CLI or Cloudflare Dashboard, never commit them:
+#
+#   npx wrangler secret put UPLOADTHING_TOKEN
+#     Your UploadThing API token (starts with sk_live_...)
+#     Get it from: https://uploadthing.com/dashboard -> API Keys
+#
+#   npx wrangler secret put AUTH_TOKEN   (optional)
+#     A bearer token you choose — protects the endpoint from public use
+#     Any MCP client that connects must send: Authorization: Bearer <AUTH_TOKEN>
